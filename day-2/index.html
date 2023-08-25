@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="siteTitleNew">Users</h1>
+
+    <ul id="arrList"></ul>
+
+
+    <script>
+        // console.log(window);
+        // document.write(window.location.href);
+
+        // window.alert("Hii");
+
+        // var a = 2, b = 3;
+
+        // Backticks
+
+        let a = "Hii ",
+            b = 5;
+
+        a += "Neeraj";
+
+        // let c = a++;
+
+        // console.log(a);
+
+        // < less than
+        // > more than
+        // <= less equal than
+        // >= more equal than
+        // console.log(a == b);
+
+
+        // if condition
+
+        // if(a == b) {
+        //     console.log("Equal");
+        // }
+
+
+        // if else condition
+
+        /*
+        if(a == b) {
+            console.log("Equal");
+        } else {
+            console.log("Not Equal");
+        }
+*/
+
+        // if else ladder
+
+        // if(a == b) {
+        //     console.log("Equal");
+        // } else if(a > b) {
+        //     console.log("Bigger");
+        // } else if(a < b) {
+        //     console.log("Smaller");
+        // } else {
+        //     console.log("Nothing");
+        // }
+
+        // triple ===
+
+        // if(a === b) {
+        //     console.log("Equal");
+        // } else {
+        //     console.log("not same");
+        // }
+
+
+
+
+
+
+
+        // console.log(typeof a);
+
+        let title = document.getElementById("siteTitleNew");
+
+        // console.log(title);
+
+        // title.style.backgroundColor = "red";
+        // title.style.color = "white";
+
+        // title.innerText = "Neeraj";
+
+
+        // console.log(title.style);
+
+
+        // Datasets in javascript
+        // 1). Array
+        // 2). Object
+
+        let arr = ["Nandkishor", "Neeraj"],
+            arr2 = ["hii", "add"];
+
+        let userList = [{
+                firstName: "Nandkishor",
+                lastName: "Sahu",
+                age: 25,
+                admin: true
+            },
+            {
+                firstName: "Neeraj",
+                lastName: "Saini",
+                age: 23,
+                admin: false
+            },
+            {
+                firstName: "Monu",
+                lastName: "Sahu",
+                age: 20,
+                admin: false
+            }
+        ];
+
+        console.log(userList);
+
+        let listHTML = '';
+
+        for (var i = 0; i < userList.length; i++) {
+
+            let userFirstName = userList[i].firstName,
+            userLastName = userList[i].lastName,
+            userRole = userList[i].admin,
+            userAge = userList[i].age;
+
+            listHTML += `<li><b>Name</b> - ${userFirstName} ${userLastName},<br><b>Age</b> - ${userAge},<br><b>Admin</b> - ${userRole}</li>`;
+
+            // console.log(arr[i]);
+        }
+        document.getElementById("arrList").innerHTML = listHTML;
+
+        // arr.pop();  removes last
+        // arr.shift();  removes first
+        // arr.push("Ajay", 45, false);  add on last
+        // arr.unshift("Ajay", 45, false);  add on first
+        // arr.concat(arr, arr2);
+
+        // arr.push(arr2);
+
+        // document.getElementById("arrList").innerHTML = "<li class='hii'>"+arr+"</li>";
+        // document.getElementById("arrList").innerHTML = `<li>${arr}</li>`;
+
+
+        // Loop through Array
+
+        // console.log(arr);
+
+
+        // let listHTML = '';
+
+        // if (arr.length == 0) {
+
+        //     document.getElementById("arrList").innerHTML = 'No Data to show.';
+
+        // } else {
+        //     for (var i = 0; i < arr.length; i++) {
+
+        //         listHTML += `<li>Name - ${arr[i]}</li>`;
+
+        //         // console.log(`${i+1} - ${arr[i]}`);
+        //     }
+        //     document.getElementById("arrList").innerHTML = listHTML;
+        // }
+
+        // console.log(arr.length, arr);
+
+        // console.log(arr[1]);
+    </script>
+
+</body>
+
+</html>
