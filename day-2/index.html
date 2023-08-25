@@ -9,6 +9,10 @@
 
 <body>
 
+    <h1>Charging <b id="chargeInfo"></b></h1>
+
+    <h1>Your Battery Percentage <b id="batteryStatus"></b></h1>
+
     <h1 id="siteTitleNew">Users</h1>
 
     <ul id="arrList"></ul>
@@ -132,11 +136,12 @@
         for (var i = 0; i < userList.length; i++) {
 
             let userFirstName = userList[i].firstName,
-            userLastName = userList[i].lastName,
-            userRole = userList[i].admin,
-            userAge = userList[i].age;
+                userLastName = userList[i].lastName,
+                userRole = userList[i].admin,
+                userAge = userList[i].age;
 
-            listHTML += `<li><b>Name</b> - ${userFirstName} ${userLastName},<br><b>Age</b> - ${userAge},<br><b>Admin</b> - ${userRole}</li>`;
+            listHTML +=
+                `<li><b>Name</b> - ${userFirstName} ${userLastName},<br><b>Age</b> - ${userAge},<br><b>Admin</b> - ${userRole}</li>`;
 
             // console.log(arr[i]);
         }
@@ -178,6 +183,39 @@
         // console.log(arr.length, arr);
 
         // console.log(arr[1]);
+
+
+
+        // Get Battery Status
+
+        navigator.getBattery().then(
+            data => {
+                // console.log(data);
+
+                updateChargeInfo();
+                updateLevelInfo();
+
+                data.addEventListener("chargingchange", () => {
+                    updateChargeInfo();
+                });
+
+                data.addEventListener("levelchange", () => {
+                    updateLevelInfo();
+                });
+
+                function updateChargeInfo() {
+                    document.getElementById("chargeInfo").innerText = data.charging;
+                }
+
+                function updateLevelInfo() {
+                    document.getElementById("batteryStatus").innerText = `${data.level * 100}%`;
+                }
+            });
+
+
+
+
+        // console.log("End of file");
     </script>
 
 </body>
