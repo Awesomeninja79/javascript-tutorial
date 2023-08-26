@@ -217,7 +217,7 @@
                 }
 
                 function updateLevelInfo() {
-                    document.getElementById("batteryStatus").innerText = `${data.level * 100}%`;
+                    document.getElementById("batteryStatus").innerText = `${Math.round(data.level * 100)}%`;
                 }
             });
 
@@ -274,6 +274,12 @@
             inputTxt.blur();
         };
 
+        // window.document.addEventListener("pointerleave", function() {
+        //     console.log("leaving!");
+        // });
+
+
+        console.log(window);
 
 
         // console.log("End of file");
