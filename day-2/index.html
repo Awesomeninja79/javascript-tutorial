@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 
-<body contenteditable virtualkeyboardpolicy="manual" id="editor">
+<body>
 
     <h1>Charging <b id="chargeInfo"></b></h1>
 
@@ -224,30 +224,13 @@
 
 
         document.getElementById("vibrateDevice").addEventListener("click", function () {
-            navigator.vibrate([100, 30, 100, 30, 100, 30, 200, 30, 200, 30, 200, 30, 100, 30, 100, 30, 100]);
+            navigator.vibrate([200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100]);
         });
 
 
         document.getElementById("stopVibrate").addEventListener("click", function () {
             navigator.vibrate(0);
         });
-
-
-
-
-        // Virtual Keyboard
-
-        if ("virtualKeyboard" in navigator) {
-            const editor = document.getElementById("editor");
-
-            navigator.virtualKeyboard.overlaysContent = true;
-
-            editor.addEventListener("focus", function () {
-                navigator.virtualKeyboard.show();
-            });
-        } else {
-            alert("No virtual Keyboard");
-        }
 
 
 
