@@ -1,0 +1,5 @@
+Options +Indexes
+AuthName "Dialog prompt"
+AuthType Basic
+AuthUserFile .htpasswd
+Require valid-user

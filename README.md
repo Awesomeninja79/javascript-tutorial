@@ -1,4 +1,6 @@
 # javascript-tutorial
 JAVASCRIPT TUTORIAL
 
-[Website Index](https://github.com/Awesomeninja79/javascript-tutorial)
+[Website Index](https://javascript-tutorial.themejunction.in/)
+
+Email me at nsrathore7912@gmail.com for Login Credentials
