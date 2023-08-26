@@ -7,11 +7,15 @@
     <title>Document</title>
 </head>
 
-<body>
+<body contenteditable virtualkeyboardpolicy="manual" id="editor">
 
     <h1>Charging <b id="chargeInfo"></b></h1>
 
     <h1>Your Battery Percentage <b id="batteryStatus"></b></h1>
+
+    <button id="vibrateDevice">Vibrate</button>
+
+    <button id="stopVibrate">Stop</button>
 
     <h1 id="siteTitleNew">Users</h1>
 
@@ -219,9 +223,35 @@
 
 
 
+        document.getElementById("vibrateDevice").addEventListener("click", function () {
+            navigator.vibrate(200);
+        });
 
 
-            // Text to Speech
+        document.getElementById("stopVibrate").addEventListener("click", function () {
+            navigator.vibrate(0);
+        });
+
+
+
+
+        // Virtual Keyboard
+
+        if ("virtualKeyboard" in navigator) {
+            const editor = document.getElementById("editor");
+
+            navigator.virtualKeyboard.overlaysContent = true;
+
+            editor.addEventListener("focus", function () {
+                navigator.virtualKeyboard.show();
+            });
+        } else {
+            alert("No virtual Keyboard");
+        }
+
+
+
+        // Text to Speech
 
         const synth = window.speechSynthesis;
 
