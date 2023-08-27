@@ -119,26 +119,30 @@
             arr2 = ["hii", "add"];
 
         let userList = [{
-            firstName: "Nandkishor",
-            lastName: "Sahu",
-            age: 25,
-            admin: true
-        },
-        {
-            firstName: "Neeraj",
-            lastName: "Saini",
-            age: 23,
-            admin: false
-        },
-        {
-            firstName: "Monu",
-            lastName: "Sahu",
-            age: 20,
-            admin: false
-        }
+                firstName: "Nandkishor",
+                lastName: "Sahu",
+                age: 25,
+                admin: true
+            },
+            {
+                firstName: "Neeraj",
+                lastName: "Saini",
+                age: 23,
+                admin: false
+            },
+            {
+                firstName: "Monu",
+                lastName: "Sahu",
+                age: 20,
+                admin: false
+            }
         ];
 
-        console.log(userList);
+
+
+        userList.forEach(element => {
+            // console.log(element);
+        });
 
         let listHTML = '';
 
@@ -224,7 +228,9 @@
 
 
         document.getElementById("vibrateDevice").addEventListener("click", function () {
-            navigator.vibrate([200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 50, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100]);
+            navigator.vibrate([200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 50, 200, 100,
+                200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100
+            ]);
         });
 
 
@@ -280,7 +286,6 @@
 
 
         console.log(window);
-
 
         // console.log("End of file");
     </script>
