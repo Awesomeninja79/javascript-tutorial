@@ -19,6 +19,8 @@
 
     <button id="stopVibrate">Stop</button>
 
+    <button id="btON">Bluetooth</button>
+
     <h1 id="siteTitleNew">Users</h1>
 
     <ul id="arrList"></ul>
@@ -145,6 +147,7 @@
         userList.forEach(element => {
             // console.log(element);
         });
+        // console.log(userList);
 
         let listHTML = '';
 
@@ -205,6 +208,27 @@
         const appInfoTitle = document.getElementById("appInfo");
 
         appInfoTitle.innerText = window.navigator.userAgentData.platform;
+
+        
+        navigator.bluetooth.getAvailability().then((available) => {
+  if (available) {
+    const btn = document.getElementById("btON");
+    const options = {
+        acceptAllDevices: true
+    };
+
+    btn.addEventListener("click", function() {
+        const list = navigator.bluetooth.requestDevice(options);
+        console.log(list);
+    });
+    console.log("This device supports Bluetooth!");
+  } else {
+    console.log("Doh! Bluetooth is not supported");
+  }
+});
+
+
+
 
 
 
@@ -295,6 +319,7 @@
 
 
         // console.log(window);
+
 
         // console.log("End of file");
     </script>
