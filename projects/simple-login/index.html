@@ -58,6 +58,7 @@
             request.responseType = "json";
 
             request.onload = (e) => {
+                console.log(e);
                 console.log(e.currentTarget.response);
             };
 
