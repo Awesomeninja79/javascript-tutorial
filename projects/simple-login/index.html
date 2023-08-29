@@ -46,7 +46,7 @@
             const formCompiledData = Object.fromEntries(formRawData);
 
             const formUserEmail = formCompiledData.useremail;
-            const formUserPassword = formCompiledData.userpassword;
+            const formUserPassword = formCompiledData.password;
 
             const methodType = formElement.method;
             const loginAPI = `${formElement.action}?username=${formUserEmail}&password=${formUserPassword}`;
@@ -68,7 +68,7 @@
 
             request.send();
 
-            // console.log(formUserName);
+            // console.log(formCompiledData);
         };
         </script>
 </body>
