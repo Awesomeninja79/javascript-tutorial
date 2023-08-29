@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/sign-in.css">
+</head>
+
+<body class="d-flex align-items-center py-4 bg-body-tertiary">
+
+
+    <main class="form-signin w-100 m-auto">
+        <form id="loginForm" method="GET" action="api/createUser.php" validate>
+            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+            <div class="form-floating">
+                <input type="email" class="form-control" id="useremail" name="useremail" placeholder="name@example.com" required>
+                <label for="floatingInput">Email address</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                <label for="floatingPassword">Password</label>
+            </div>
+            
+            <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+        </form>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+        <script src="js/custom.js"></script>
+
+        <script>
+            const formElement = document.getElementById("loginForm");
+
+            formElement.onsubmit = (event) => {
+            event.preventDefault();
+
+            const formData = new FormData(formElement);
+
+            const methodType = formElement.method;
+            const checkAuthAPI = formElement.action;
+
+            const request = new XMLHttpRequest();
+            request.open(methodType, checkAuthAPI, true);
+            request.onload = (e) => {
+                console.log(e);
+            }
+
+            request.send();
+
+            console.dir(formElement);
+        };
+        </script>
+</body>
+
+</html>
