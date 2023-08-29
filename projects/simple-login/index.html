@@ -61,8 +61,15 @@
                 console.log(e.currentTarget.response);
             };
 
+            request.abort = (e) => {
+                console.log(e);
+                console.log(e.currentTarget.response);
+                alert(e.currentTarget.response.responseText)
+            };
+
             request.onerror = (e) => {
-                console.log(e.currentTarget.response.responseText);
+                console.log(e);
+                console.log(e.currentTarget.response);
                 alert(e.currentTarget.response.responseText)
             };
 
