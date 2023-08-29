@@ -3,7 +3,7 @@ header('Access-Control-Allow-Methods: GET');
 // header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json; charset=utf-8');
 
-$dbHost = "localhost";
+$dbHost = "127.0.0.1";
 $dbName = "u969147136_simple_login";
 $dbUserName = "u969147136_simple_login";
 $dbUserPassword = "K*7siuh(*807Q%HG5dm6T*Gus";
