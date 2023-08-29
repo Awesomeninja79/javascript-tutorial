@@ -1,9 +1,9 @@
 <?php
-$client_id = 'user';
-$client_secret = 7303448803;
-header('Authorization: Basic '.base64_encode("$client_id:$client_secret"));
+// $client_id = 'user';
+// $client_secret = 7303448803;
+// header('Authorization: Basic '.base64_encode("$client_id:$client_secret"));
 header('Access-Control-Allow-Methods: GET');
-header('Access-Control-Allow-Origin: https://themejunction.in/');
+header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json; charset=utf-8');
 
 $data = array(
