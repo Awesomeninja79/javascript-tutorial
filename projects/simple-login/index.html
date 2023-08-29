@@ -61,11 +61,14 @@
 
             request.onload = (e) => {
                 const res = e.currentTarget.response;
-                console.log(res);
+                // console.log(res);
+
                 if (e.currentTarget.status != 200) {
                     alert(`${res.code} : ${res.responseText}`);
                 } else {
-                    alert(`Welcome`);
+                    const userEmail = res.user_email;
+                    const userName = res.user_name;
+                    alert(`Welcome ${userName} | Email: ${userEmail}`);
                 }
             };
 

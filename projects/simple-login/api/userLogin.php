@@ -9,7 +9,7 @@ if (empty($_GET['password'])) {
     setError(401, "Password cannot be empty!");
 }
 
-$sqlQuery = "SELECT user_id, user_email, user_password, user_gender FROM users WHERE user_email='".$_GET['useremail']."' AND user_password='".$_GET['password']."'";
+$sqlQuery = "SELECT user_id, user_name, user_email, user_password, user_gender FROM users WHERE user_email='".$_GET['useremail']."' AND user_password='".$_GET['password']."'";
 
 $result = $mysqli->query($sqlQuery);
 
