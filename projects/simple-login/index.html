@@ -42,20 +42,24 @@
             formElement.onsubmit = (event) => {
             event.preventDefault();
 
-            const formData = new FormData(formElement);
+            const formRawData = new FormData(formElement);
+            const formCompiledData = Object.fromEntries(formRawData);
+
+            const formUserEmail = formCompiledData.useremail;
+            const formUserPassword = formCompiledData.useremail;
 
             const methodType = formElement.method;
-            const checkAuthAPI = formElement.action;
+            const loginAPI = `${formElement.action}?username=${formUserEmail}&password=${formUserPassword}`;
 
             const request = new XMLHttpRequest();
-            request.open(methodType, checkAuthAPI, true);
+            request.open(methodType, loginAPI, true);
             request.onload = (e) => {
                 console.log(e);
             }
 
             request.send();
 
-            console.dir(formElement);
+            // console.log(formUserName);
         };
         </script>
 </body>
