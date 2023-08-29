@@ -60,10 +60,9 @@
             request.responseType = "json";
 
             request.onload = (e) => {
-                console.log(e);
                 const res = e.currentTarget.response;
                 console.log(res);
-                if (res.status != 200) {
+                if (e.currentTarget.status != 200) {
                     alert(`${res.code} : ${res.responseText}`);
                 } else {
                     alert(`Welcome`);
