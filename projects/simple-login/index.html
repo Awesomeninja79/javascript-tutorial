@@ -52,10 +52,19 @@
             const loginAPI = `${formElement.action}?username=${formUserEmail}&password=${formUserPassword}`;
 
             const request = new XMLHttpRequest();
+
             request.open(methodType, loginAPI, true);
+
+            request.responseType = "json";
+
             request.onload = (e) => {
-                console.log(e);
-            }
+                console.log(e.currentTarget.response);
+            };
+
+            request.onerror = (e) => {
+                console.log(e.currentTarget.response);
+                alert(e.currentTarget.response.responseText)
+            };
 
             request.send();
 
