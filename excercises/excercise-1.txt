@@ -1,0 +1,10 @@
+1). Pehle user se uski age poochni hai.
+What is your age?
+
+2). fir uski age agar 18 se kam hai to use ek alert dikhao.
+age < 18
+You cannot drive Car.
+
+3). agar age 18 se zyaada hai to user ko alert dikhao.
+age > 18
+You can drive Car now.
