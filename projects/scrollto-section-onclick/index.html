@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark">
+    <title>Scroll to Sectio onclick</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <style>
+        body {
+            padding-top: 100px;
+        }
+
+        section {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .row {
+            height: 90vh;
+            background: var(--bs-secondary-bg);
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 99;
+            background: var(--bs-body-bg);
+            box-shadow: 0 0 30px #00000057;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="d-flex justify-content-center py-3">
+        <ul class="nav nav-pills" id="headNav">
+            <li class="nav-item"><a href="javascript:void(0)" class="nav-link active" scrollto="#home">Home</a></li>
+            <li class="nav-item"><a href="javascript:void(0)" class="nav-link" scrollto="#features">Features</a></li>
+            <li class="nav-item"><a href="javascript:void(0)" class="nav-link" scrollto="#pricing">Pricing</a></li>
+            <li class="nav-item"><a href="javascript:void(0)" class="nav-link" scrollto="#faqs">FAQs</a></li>
+            <li class="nav-item"><a href="javascript:void(0)" class="nav-link" scrollto="#about">About</a></li>
+        </ul>
+    </header>
+
+
+
+    <section id="home">
+        <div class="container text-center">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h1>Home Section</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container text-center">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h1>Features Section</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <div class="container text-center">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h1>Pricing Section</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faqs">
+        <div class="container text-center">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h1>FAQs Section</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container text-center">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h1>About Section</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
